@@ -213,6 +213,13 @@
         compatible = "zmk,input-listener";
         status = "disabled";
     };
+
+    /* 充電ステータス */
+    chg_stat: chg_stat {
+        compatible = "custom,chg-stat";
+        gpios = <&gpio0 17 GPIO_ACTIVE_LOW>; /* Low=充電中 */
+        status = "okay";
+    };
 };
 
 &pinctrl {
